@@ -58,22 +58,24 @@ class QuoteBox extends React.Component {
   render() {
     const buttonClass = classNames('new-quote');
     return (
-      <div className="App-header" style={{backgroundColor: this.state.color, transition: "all 1s ease"}}>
-        <div className="quote-box">
-          <div className="text" style={{color: this.state.color, transition: 'all 1s ease'}}>
-              <i>{this.state.quote}</i>
-            <div className="author" style={{color: this.state.color, transition: 'all 1s ease'}}>
-              <b>- {this.state.author}</b>
-              <div>
-                <button className='twitter' onClick={() => window.open('https://twitter.com/intent/tweet?hashtags=quotes&text=' + encodeURIComponent('"' + this.state.quote + '" \n-' + this.state.author))} style={{backgroundColor: this.state.color, transition: 'all 1s ease'}}><FontAwesomeIcon icon={faTwitter} /></button>
-                <button className='tumblr'  onClick={() => window.open('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes&caption=' + encodeURIComponent(this.state.author) + '&content=' + encodeURIComponent(this.state.quote) + '&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button')} style={{backgroundColor: this.state.color, transition: 'all 1s ease'}}><FontAwesomeIcon icon={faTumblr} /></button>
-                <button ref='button' className={buttonClass} onClick={this.changeQuote} style={{backgroundColor: this.state.color, transition: "all 1s ease"}}>New Quote</button>
+      <body>
+        <div className="App-header" style={{backgroundColor: this.state.color, transition: "all 1s ease"}}>
+          <div className="quote-box">
+            <div className="text" style={{color: this.state.color, transition: 'all 1s ease'}}>
+                <i>{this.state.quote}</i>
+              <div className="author" style={{color: this.state.color, transition: 'all 1s ease'}}>
+                <b>- {this.state.author}</b>
+                <div>
+                  <button className='twitter' onClick={() => window.open('https://twitter.com/intent/tweet?hashtags=quotes&text=' + encodeURIComponent('"' + this.state.quote + '" \n-' + this.state.author))} style={{backgroundColor: this.state.color, transition: 'all 1s ease'}}><FontAwesomeIcon icon={faTwitter} /></button>
+                  <button className='tumblr'  onClick={() => window.open('https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes&caption=' + encodeURIComponent(this.state.author) + '&content=' + encodeURIComponent(this.state.quote) + '&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button')} style={{backgroundColor: this.state.color, transition: 'all 1s ease'}}><FontAwesomeIcon icon={faTumblr} /></button>
+                  <button ref='button' className={buttonClass} onClick={this.changeQuote} style={{backgroundColor: this.state.color, transition: "all 1s ease"}}>New Quote</button>
+                </div>
               </div>
             </div>
           </div>
+          <i style={{fontSize: '0.5em', marginTop: '1em'}}>Created by Raphael Fretter</i>
         </div>
-        <i style={{fontSize: '0.5em', marginTop: '1em'}}>Created by Raphael Fretter</i>
-      </div>
+      </body>
     );
   }
 }
