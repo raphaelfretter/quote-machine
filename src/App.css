@@ -2,20 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +13,92 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 750px) {
+  .App-header {
+      width: 100vw;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote-box {
+  border-radius: 3px;
+  position: relative;
+  width: 20em;
+  padding: 40px 50px;
+  display: table;
+  background-color: #fff;
+}
+
+.text {
+  font-size: 1em;
+  text-align: center;
+  width: 20em;
+  height: auto;
+  clear: both;
+}
+
+.author {
+  font-size: 0.6em;
+  text-align: right;
+  width: 20em;
+  height: auto;
+  clear: both;
+  margin-top: 1em;
+  float: right;
+}
+
+.buttons {
+  width: 20em;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9em;
+  text-align: center;
+  height: 40px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.twitter {
+  width: 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  text-align: center;
+  height: 40px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+  float: left;
+}
+
+.tumblr {
+  width: 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  text-align: center;
+  height: 40px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 1em;
+  float: left;
+}
+
+.new-quote {
+  float: right;
+  width: 10em;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9em;
+  text-align: center;
+  height: 40px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+  float: right;
 }
