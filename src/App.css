@@ -2,18 +2,9 @@
   text-align: center;
 }
 
-body {
-  min-height: 100vh;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .App-header {
   min-height: 100vh;
-  width: auto;
+  /* width: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
